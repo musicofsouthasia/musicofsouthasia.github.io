@@ -11,19 +11,23 @@
     <!-- Header -->
       <section id="header">
         <header>
-          <span class="image avatar"><img src="images/bun.png" alt="" /></span>
-          <h1 id="logo"><a href="#">Music of South Asia in the 21<sup>st</sup> century</a></h1>
+          <span class="image avatar"><img src="images/sidebar-icon.jpg" alt="" /></span>
+          <h1 id="logo"><a href="#">South Asian Music: An Analysis of the Present</a></h1>
         </header>
         <nav id="nav">
           <ul>
-            <li><a href="#intro" class="active">Introduction</a></li>
-            <li><a href="#scene">Scene</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#times">Rendering Times</a></li>
-            <li><a href="#extra-credit">Extra Credit</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#sources">Sources</a></li>
-            <li><a href="#builds">Build Files</a></li>
+            <li><a href="#abstract" class="active">Abstract</a></li>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#classical">What is Classical Music?</a></li>
+            <li><a href="#downfall">The Downfall of Classical Musicians</a></li>
+            <li><a href="#commodification">The Commodification of Music</a></li>
+            <li><a href="#gharana">The Gharanas and the Guru-Shishya Relation</a></li>
+            <li><a href="#fusion">The Fusion and the Music Culture</a></li>
+            <li><a href="#film">The Film Music Industry</a></li>
+            <li><a href="#narrative">Personal Narratives</a></li>
+            <li><a href="#remarks">Concluding Remarks</a></li>
+            <li><a href="#team">The Team</a></li>
+            <li><a href="#references">References</a></li>
           </ul>
         </nav>
       </section>
@@ -35,26 +39,27 @@
           <div id="main">
 
             <!-- One -->
-              <section id="intro">
+              <section id="abstract">
                 <div class="image main" data-position="center">
-                  <img src="images/chess_reflective.png" alt="" />
+                  <img src="images/cover.jpg" alt="" />
                 </div>
                 <div class="container">
                   <header class="major">
-                    <h2>Introduction</h2>
-                    <p>Rendering a High-Polygon Chess Board Scene</p>
+                    <h2>Abstract</h2>
+                    <p>South Asian Music: An Analysis of the Present</p>
                   </header>
-                  <p style="font-size: 1.4em;">
-                    We thought that it would be pretty cool to have a customizable chess board as our scene. One of our team members spent a good amount of time this semester building a chess AI for another class, and so the subject matter was on our mind, and we figured that it would be neat if we could render pleasing-looking scenes representing arbitrary chess states. Once we had a basic rendering of our board, we played around with adding things like reflectance on the tiles. We used chess pieces with a lot of polygons to show off our ray tracer using a complex scene.
+                  <p style="font-size: 1.4em;" align="justify">
+                    South Asian music has always benefitted from its core flexibility and transformative versatility, but just like any other art form, the influx of newer concepts and techniques has led to the decline and in some cases, even rejection, of many features of its “classical” traditions, especially here in Pakistan. In this age of post-colonial globalization, the constant juxtaposition of western ideals, values and institutions with South Asian counterparts has had a deep impact on the society that relied on the latter, including practitioners, theorists as well as hobbyists, and also on the newer generation’s perception of what South Asian music really is. This essay aims to analyze the evolutionary process that South Asian classical music has undergone.  It is also an attempt to research and explore breadth-wise the fundamental changes and events through which classical music adopted the ethics and values which manifest in the way it is now practiced and performed. The scope of this research is limited to the context of Pakistan, and our sources include both primary and secondary data, drawing from scholarly literature as well as personal interviews of a few renowned personalities from the current classical music scene of Pakistan. All in all, the essay is an effort to critically explore and to document the cultural, industrial, and musical changes that have 
+                    impacted South Asian classical music and made it what we know it today to be.
                   </p>
                 </div>
               </section>
 
 						<!-- Two -->
-							<section id="scene">
+							<section id="intro">
 								<div class="container">
 									<header class="major">
-										<h2>Scene</h2>
+										<h2>Introduction</h2>
 									</header>
 									<div class="row">
 										<img width="100%" height="100%" src="images/chess_matte.png"/>
@@ -75,247 +80,216 @@
 										polygons captured in our scene which took around 20 seconds to render using
 										a KD tree and multithreading on 8 cores.
 									</p>
-
-									<h3>Adding Reflections</h3>
-									<div class="row">
-										<img width="100%" height="100%" src="images/chess_reflective.png"/>
-									</div>
-									<br>
-									<a download="chess_reflective.png" href="images/chess_reflective.png" title="Reflective Scene">
-										High Resolution Image (1920x1920)
-									</a>
-									<br>
-									<a download="chess_reflective_low.png" href="images/chess_reflective_low.png" title="Reflective Scene Low Res">
-										Low Resolution Image (480x480)
-									</a>
-									<br>
-									<p style="font-size:1.4em">
-										In this scene we demonstrate our reflective material by replacing the matte material on the
-										chessboard triangles with a reflective material. This uses secondary rays to calculate the
-										colors that result from bouncing off the polygons.
-									</p>
-
-									<h3>Other Variations</h3>
-                  <div class="row">
-                    <div class="col-6 col-12-xsmall">
-											<a download="chess_reflective_colors.png" href="images/chess_reflective_colors.png" title="Reflective Colors">
-												<img width="100%" height="auto" src="images/chess_reflective_colors.png"/>
-											</a>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Colored Reflections</p></header>
-                      </div>
-                    </div>
-                    <div class="col-6 col-12-xsmall">
-											<a download="chess_reflective_sphere.png" href="images/chess_reflective_sphere.png" title="Reflective Sphere">
-												<img width="100%" height="auto" src="images/chess_reflective_sphere.png"/>
-											</a>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Reflective Sphere</p></header>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <p style="font-size:1.4em">
-                    We also played around with a couple other things in our scene. Our reflective material also had the
-										ability to filter the colors in the reflected image so we tested this out on the chessboard. We also
-										played around with adding other reflecive objects like this sphere above the board.
+                  <p style="font-size:1.4em" align="justify">
+                  Now that we have all this established, it becomes essential to question the factors that got classical music to where it is today in the country; broadly speaking, these mainly relate to various cultural shifts that historically affected artists and their relationships with the music. It is also important to clarify here that in most traditional texts on South Asian music, authors use the term “Indian music” to refer to the entire plethora of the music of the region. For example, Daniel Neuman in his book 'The life of music in North India: The organization of an artistic tradition” writes about the present condition of classical music in the region that, “…the way Indian music continues to maintain its integrity and autonomy in a world so vastly changed from that which gave it birth…" (Neuman, 1990, p. 18).  This is misleading since it communicates as if the music is just original to modern-day India. Therefore, for purposes of this essay, the term “South Asian music” has been used in place as a conscious decision to avoid this misrepresentation, so as to also capture the relevance of the music to the rich musical backgrounds of Pakistan, Nepal, as well as Bangladesh. 
                   </p>
-
-									<h3>Honorable Mentions</h3>
-                  <div class="row">
-                    <div class="col-6 col-12-xsmall">
-											<a download="chess_buggy_reflective_walls.png" href="images/chess_buggy_reflective_walls.png" title="Buggy Reflective Walls">
-												<img width="100%" height="auto" src="images/chess_buggy_reflective_walls.png"/>
-											</a>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Mirrors</p></header>
-                      </div>
-                    </div>
-                    <div class="col-6 col-12-xsmall">
-											<a download="chess_red_reflective_walls.png" href="images/chess_red_reflective_walls.png" title="Red Reflective Walls">
-												<img width="100%" height="auto" src="images/chess_red_reflective_walls.png"/>
-											</a>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Colored Mirrors</p></header>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <p style="font-size:1.4em">
-                    We also experimented with adding mirrors to demonstrate how reflections can bounce off of mulitple
-										reflective surfaces in our scene, however we found that this generated out of gamut colors (which
-										were changed to black in the ppm to png conversion process). This is a feature, amoung others, that
-										we would like to fully implement with more time.
-                  </p>
-								</div>
-							</section>
-
+                </div>
             <!-- Three -->
-              <section id="features">
+              <section id="classical">
                 <div class="container">
                   <header class="major">
-                    <h2>Features</h2>
-                    <p>Here are some of the interesting features we implemented on top of the code provided:</p>
+                    <h2>What is Classical Music?</h2>
                   </header>
-                  <h3>Lighting</h3>
-                  <div class="row">
-                    <div class="col-4 col-12-xsmall">
-                      <img width="100%" src="images/ambient.png"/>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Ambient Light</p></header>
-                      </div>
-                    </div>
-                    <div class="col-4 col-12-xsmall">
-                      <img width="100%" src="images/ambient_point.png"/>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Ambient and Point Light</p></header>
-                      </div>
-                    </div>
-                    <div class="col-4 col-12-xsmall">
-                      <img width="100%" src="images/ambient_point_directional.png"/>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Ambient, Point, and Directional Light</p></header>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <p style="font-size:1.4em">
-                    These images show some scenes we created using some of the types of lighting that we implemented.
+                  <p style="font-size:1.4em" align="justify">
+                  Classical Hindustani South Asian music is one of the many forms of music whose cultural and regional origination can be traced back to the Indian subcontinent. This music is conceived in terms of raags, its sole backbone, which form the melodic structure of the music, with each raag consisting of a combination of the seven surs called the swaras, all of which have their own tone which can either be Shudh, Tivar, or Komal, totaling to twelve-notes (Chaubey, 1945). Based on the number of notes, each raag can belong to one of three main categories: Sampuran – raags having all seven notes, Shadava – raags having six notes, and the Oudava – raags having five notes. Each of these raags comes from a parent scale called a thaat, and there is a total of ten of these in the modern raag system of South Asian music, namely: Iman, Khamaj, Bhairavi, Kafi, Marwa, Purvi, Bhairon, Todi and Bilawal. The four important aspects that make up the raag are its vadi (note of primary focus), samvadi (note of secondary focus), vivadi (notes restricted in the raag) and anuvadi (notes other than vadi and samvadi). Each raag provides interpretation of emotions that mimic closely the mood of any particular time of the day. 
                   </p>
-                  <h3>Materials</h3>
-                  <div class="row">
-                    <div class="col-6 col-12-xsmall">
-                      <img width="100%" src="images/ambient_point_directional.png"/>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major" style="font-size:1.4em"><p class="names">Matte Material</p></header>
-                      </div>
-                    </div>
-                    <div class="col-6 col-12-xsmall">
-                      <img width="100%" src="images/reflective.png"/>
-                      <div style="padding-bottom:0px !important">
-                        <header class="major" style="font-size:1.4em"><p class="names">Reflective Material</p></header>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <p style="font-size:1.4em">
-                    These images show spheres of different materials that we implemented.
-                  </p>
-                  <h3>Smooth Shading</h3>
-                  <div class="row">
-                    <div class="col-6 col-12-xsmall">
-                      <img width="100%" src="images/bunnyFlat.png" alt="Stanford bunny with flat shading" />
-                      <div style="padding-bottom:0px !important">
-                        <header class="major" style="font-size:1.4em"><p class="names">Flat Shading</p></header>
-                      </div>
-                    </div>
-                    <div class="col-6 col-12-xsmall">
-                      <img width="100%" src="images/bunnySmooth.png" alt="Stanford bunny with smooth shading" />
-                      <div style="padding-bottom:0px !important">
-                        <header class="major" style="font-size:1.4em"><p class="names">Smooth Shading</p></header>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <p style="font-size:1.4em">These two images compare the Stanford bunny triangle mesh with flat and smooth shading.
-                    In flat shading, each triangle has a constant normal, causing each triangle to appear "flat".
-                    In smooth shading, the normal of each triangle varies based on the normals of the adjacent triangles, creating a smoother appearance.
-                    This allows us to better represent smooth surfaces (such as our chess pieces) as triangle meshes.
-                  </p>
-                  <h3>Anti-Aliasing</h3>
-                  <div class="row">
-                    <div class="col-4 col-12-xsmall">
-                      <img width="100%" src="images/antiAliasSimple.png" alt="Primitives with no anti-aliasing" />
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">No Anti-Aliasing</p></header>
-                      </div>
-                    </div>
-                    <div class="col-4 col-12-xsmall">
-                      <img width="100%" src="images/antiAliasRegularBox4.png" alt="Primitives with regular sampling and a box filter" />
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Regular Sampling with a Box Filter</p></header>
-                      </div>
-                    </div>
-                    <div class="col-4 col-12-xsmall">
-                      <img width="100%" src="images/antiAliasJitterGaussian4.png" alt="Primitives with jitter sampling and a gaussian filter" />
-                      <div style="padding-bottom:0px !important">
-                        <header class="major"><p style="font-size:1.4em" class="names">Jitter Sampling with a Gaussian Filter</p></header>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <p style="font-size:1.4em">These three images demonstrate the two types of anti-aliasing we implemented.
-                    The first image contains a scene with three primitives with no anti-aliasing.
-                    Notice the unpleasant "jaggies" that appear along the edges of the triangle.
-                    The second image uses regular sampling of degree 4 with a box filter, meaning that we cast 16 rays at regular intervals per pixel with equal weight.
-                    The third image uses jitter sampling of degree 4 with a gaussian filter.
-                    This means that each ray is cast at a random point through its region of the pixel and given more weight if it is closer to the center of the pixel.
-                    This approach produces more natural looking images but is more computationally expensive.
+                  <p style="font-size:1.4em" align="justify">
+                  S.K. Chaubey writes in his book, “Indian Music Today”, that the practicing musician of South Asian music is not only well able to paint a raag but can also interpret its emotions and add further grace to it accordingly by improvisation (Chaubey, 1945). The richness and depth of the raag system in classical music is what gives it its unique character and that distinguishes it from all other forms of music. It is often asked if words and lyrics are needed in classical music. S.K. Chaubey answers this beautifully by saying that classical music is spiritual content that can maintain its individuality even without words and can still appeal to the majority through the unique way it is performed. It follows from this that in order to achieve such a level, extensive training and dedication is required at the musician’s end.
                   </p>
                 </div>
               </section>
 
             <!-- Four -->
-              <section id="times">
+              <section id="downfall">
                 <div class="container">
                   <header class="major">
-                    <h2>Rendering Times</h2>
+                    <h2>The Downfall of Classical Musicians</h2>
                   </header>
-                  <h3>K-D Tree</h3>
-                  <img width="100%" src="images/k-dTreeSpeedup.png" alt="Graph showing runtime as function of number of vertices for kD and regular" />
-                  <img width="100%" src="images/k-dtable.png" alt="Table showing runtime as function of number of vertices for kD and regular" />
-                  <p style="font-size:1.4em">
-                    We implemented K-D trees as our acceleration structure, and got drastic speedup results after a lot of debugging. It took a lot of effort but it was more than worth it in the end because it allowed us to render complex 1920x1080 scenes in very short amounts of time, giving us the freedom to use higher-resolution models than we anticipated and more complex materials (e.g. reflective). As you can see, the returns are less apparent for small numbers of polygons, but once the number of them gets high enough it's a night-and-day difference.
+                  <p style="font-size:1.4em" align="justify">
+                  By the start of 20th century, many older forms and settings where music was practiced such as courts of rajas and nawabs had disappeared due to political and social changes caused by the arrival of British. The disappearance of courtly benefactions along with the shift of people to cities played a major role in bringing an economic, demographic and cultural change in the undivided India and led to the establishment of the urban middle class, who were then the new patrons of music. They shifted the center of musical activities from the courts to urban centers such as Delhi and Bombay, where a commercial environment was setup, in turn bringing many economic uncertainties to these artists. The practice and display of music eventually became limited in spaces like urban kothas, stage concerts, western-style music schools or theatres (Chaubey, 1945). The musicians who previously enjoyed high status and benefits in the royal patronage period, struggled for their livelihood and the responsibility of carrying forward the traditions of their gharana in the new system. 
                   </p>
-                  <h3>Multithreading</h3>
-                  <img width="100%" src="images/multithreadSpeedup.png" alt="Graph showing runtime on different numbers of cores" />
-                  <img width="100%" src="images/multithreadTable.png" alt="Table showing runtime on different numbers of cores" />
-                  <br><br>
-                  <p style="font-size:1.4em">
-                    Because ray tracing is a highly parallelizable task, we implemented multithreading using Open MP.
-                    We rendered a test scene with 16,302 polygons and 800x800 resolution with different numbers of cores ranging from 1 to 64.
-                    The graph above demonstrates a a significant speedup with increasing cores, with the program executing 32 times faster on 64 cores compared to 1 core.
+                  <p style="font-size:1.4em" align="justify">
+                  With the modern changes in subcontinent’s governance, artists were faced with emerging economic difficulties. Previously, the musician was considered as a person who was of the high sacred calling who performed his noble duty in the king’s court. Because of his special position in the courts, he never felt the discomfort of any economic struggle, the struggle which many present-day classical performers are facing. The musicians ruled with their traditions and great mastery in music. However, today music is no longer considered a noble calling, but rather a very low profession. Music is no more viewed as a form of art, but rather as a source of entertainment. The audience does not look up to musicians as the one who can arouse spirituality and emotions among them or inspire their deep passions, but rather one who can make their boredom go away by singing the choice of music they want (Van der Meer, 2012).
+                  </p>               
+                  <center>
+                  <figure>
+                    <img src="images/instruments.jpg"/>
+                    <figcaption>Figure 1: (L to R) The Tabla, Sitar, and the Harmonium. 
+                      <br>The key instruments from Hindustani South Asian music.</figcaption>
+                  </figure>
+                  </center>
+                  <br>
+                  <p style="font-size:1.4em" align="justify">
+                  This loss in culture has directly affected musicians in the country and their social status. At present, musicians are not enjoying any economic benefits, they have no voice in economic, social and political affairs of the society. The capitalist society offers them no economic security. Particularly in Pakistan, classical music is an insecure profession. 
+                  Other people who work for certain hours and earn their wages have an assured income, in comparison, a musician has to go through the hurdles of first finding an audience, then feeding on their taste which has also transformed with the western influence on our culture, or incase if a music director approaches them, agree to the music style and the amount they are willing to pay them (Chaubey, 1945). Hence, the musician’s economic security heavily depends on the crowd; the crowd, by virtue of the society it has been brought up in, has an extremely limited musical diet and musical sense as argued previously. Such circumstances have compelled many of these artists to reject pure forms of their musical techniques and to adopt those musical trends which are in demand, hence sidelining the little classical music that is present in the country in its pure form.
+                  </p>
+                  <p style="font-size:1.4em" align="justify">
+                  In comparison to previous times, a modern-day musician is more invested in fashioning music which expresses his superficialities, as that is what easily appeals to the crowd. The music industry today is more invested in earning quick money than it is in retaining the originality and beauty of the art form. Musicians have to capture the market and sell their music in the form that is in demand, because this is what gets them their bread at the end of the day. Modern day musicians and artists are rapidly realizing the system of supply and demand that is needed to channel the market. Whatever is popularized by the media becomes the diet of the crowd, and modern-day musicians make money by fulfilling this demand. In the process, what has been lost is the respect of music. Musicians treat music as a form of business rather than as a sacred art. Many amateur musicians who have received respect and success in the industry today in the country are the ones who have never been properly trained, nor do they have the intention to. Yet, these amateur musicians have scored over the professional and well-trained musicians in terms of opportunities and earning (Chaubey, 1945). As a result of all this, classical music in the country is what is at stake today, and the conditions seem to be not so good since it is at the hands of competent as well as incompetent people in the country to take it forward, and the number of people in the latter category outweighs those in the former by far. 
                   </p>
                 </div>
               </section>
 
             <!-- Five -->
-            <section id="extra-credit">
+            <section id="commodification">
                 <div class="container">
                   <header class="major">
-                    <h2>Extra Credit Features</h2>
-                    <p>The following features we implemented go beyond the basic requirements for this project.</p>
+                    <h2>The Commodification of Music</h2>
                   </header>
-                  <ol>
-                    <li style="font-size:1.4em"><b>Multithreading:</b> We implemented multithreading with OpenMp, which increased our execution speed by over 32 times.</li>
-                    <br><li style="font-size:1.4em"><b>Loading PLYs:</b> We can load any arbitrary triangle mesh ply file.</li>
-                    <br><li style="font-size:1.4em"><b>Smooth Shading:</b> When loading a triangle mesh, we can choose between smooth or flat shading.</li>
-                    <br><li style="font-size:1.4em"><b>Regular Sampling with a Box Filter:</b> For simple anti-aliasing, we implemented regular sampling with a box filter.  We can specify the degree (number of rays) as a parameter of the sampler.</li>
-                    <br><li style="font-size:1.4em"><b>Jitter Sampling with a Gaussian Filter:</b> For advanced anti-aliasing, we implemented jitter sampling with a gaussian filter.  We can specify the degree and standard deviation as parameters of the sampler.</li>
-                    <br><li style="font-size:1.4em"><b>Command-line Interface:</b> The user can customize many aspects of the program by passing command line flags.  For example, they can specify the output file name or enter "verbose" which prints render information.</li>
-                    <br><li style="font-size:1.4em"><b>Generalized Camera Viewing</b> While the default infrastructure requires that the viewing plane have a constant z, we generalized the viewing plane to support non constant z.  We can support specifying the camera and viewing plane in terms of a camera position, camera angle, and field of view.</li>
-                    <br><li style="font-size:1.4em"><b>Command-line Interface:</b> The user can customize many aspects of the program by passing command line flags.  For example, they can specify the output file name or enter "verbose" which prints render information.</li>
-                    <br><li style="font-size:1.4em"><b>Configurable Chess Layout:</b> The layout of the pieces on the chess board is read at runtime from the file "chessLayout.txt".  This way, the we can change the layout simply by changing the layout file without having to recompile the raytracer. </li>
-
-                  </ol>
+                    <p style="font-size:1.4em" align="justify">
+                    The art of music has become a part of the entertainment industry or the “showbiz”, where it must amuse and appeal to the showbiz audience. The time when musical art was produced for artistic creativity has now been absorbed as a political and commercial form of musical art for the entertainment industry. A closer look at the global entertainment industry – a place where South Asian classical music is struggling to find its way to survive and preserve its tradition – reveals the greater shifts and changes that have taken place in the way music is now viewed as a commodity (Van der Meer, 2012). The increase in the profit and loss turnover and the opening up of international markets and this competition and chase of entertaining the masses have all made music and performing arts a large part of the business industry. 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    Today, an artist does not care about learning the pure form of music, but is mainly interested in the ways they can groom the music to make it more appealing to the audience, so that their work can be a “hit.” The musicians today have a whole public relations (PR) team with them to track their fans and their success and to guide them about what will be a hit in the market and what will be not. The duration of music concerts has squeezed to one- or two-hour long performances in comparison to longer sessions in the past. The organizers of the show guide the performer to make a package of three to four performances that can grip audience’s attention in that duration. 
+                    </p>
+                  <center>
+                  <figure>
+                    <img src="images/coke.jpg"/>
+                    <figcaption>Figure 2: Coke Studio - a private music franchise in Pakistan.</figcaption>
+                  </figure>
+                  </center>
+                  <br>
+                    <p style="font-size:1.4em" align="justify">
+                    There are hardly any classical performances that include semi-classical forms of music such as thumri, kajri and bhajans. The music has shifted its way from a complex raag to a simpler melody, from a dynamic range to a less flexible range, mostly higher swaras, and a higher beat density (Vedabala, 2016 & Yusuf, 2018). The artist is now in need of a sound engineer who is there to assist them while performing on stage through an installed modern sound system which adds value to the performance. Complementing this there exist light men who create visual effects to give a more aesthetic look to the performance and stage and event managers who look at the choreography part of the performance. Thus, music which was previously a form of community gathering and an activity for spirituality and peace, under capitalism has become the product for the market. This market has become a vital mechanism to current day music; it is the place where music standards are set, and the quality is judged according to the extent the musician is able to entertain the audience. Hence, the performances are sold in a far more calculative manner, where the artist’s management team makes sure that the artist is presented as an iconic personality, and his performance is the one that could have an impact on the audience for days (Vedabala, 2016). Moreover, the dire intention to bring uniformity to the music such that it can be launched all over the world quickly and the desire to produce hit songs by repeating past successful hit song  recipes has led to the same monotonic mainstream kind of music to be everywhere, music that is fast-paced and has a disco or love theme; whereas previously there was a distinct music flavor and characteristic of each music type and raag. 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    This is not to say that all forms of classical music are struggling in Pakistan. For example, Qawwalis and Ghazals remain widely popular till date. However, there has still been some commercialization of qawwalis. Previously, qawwali performances were largely restricted to Sufi shrines and Darbars which depended on metaphorical use of lyrics to induce ecstasy among the visitors. However, the use of qawwali today in gatherings is mostly not meant to involve them spiritually, but the intention again is more towards providing entertainment. Similarly, Coke Studio has been successful in generating some musical interest among its listeners regarding traditional art forms, however, it must be remembered that its name is promoting a corporate brand rather than actual South Asian classical music (Jafri, 2016). Hence, there is again more of a commercial motivation for the sponsors to promote a brand through, per say, the propaganda of reviving the classical art of music. 
+                    </p>
                 </div>
               </section>
 
             <!-- Six -->
+            <section id="gharana">
+                <div class="container">
+                  <header class="major">
+                    <h2>The Gharanas and the Guru-Shishya Relation</h2>
+                  </header>
+                    <p style="font-size:1.4em" align="justify">
+                    The Guru-shishya relation, the relation between the learned musician and his learning disciple, was the most essential part of the South Asian music culture as it is through it that musical knowledge and wisdom has been transferred onto generations. In Pakistan, this system has declined exponentially; today, hardly any student out there is a shagird of a particular guru and is receiving musical training full-time. The guru-shishya relationship has taken the form of mere weekend classes or crash courses on music and music is generally regarded as a side-hobby instead of a profession. The classes are now more time based compared to being based on the talim the guru is giving. The actual learning of music is more materialistic and these classes are creating detached relationships between the guru and shishya. The students also have less patience to cope up with the temperament of their gurus and are easily able to switch gurus since they are the ones paying them (Van der Meer, 2012), nor are the students pursuing their career in music only as it is a more insecure profession in the modern-day compared other jobs and disciplines. Hence, the music for the shishya is more of a hobby now rather than an identity. Music classes are held through internet, video chats, calls, and YouTube rather than through personal and physical interactions of the guru and shishya. 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    Moreover, the introduction of written musical theories has made the music learning more theoretical rather than practical. The notations of gats and vistaar are easily available on the internet. However, it must be noted that this theoretical learning of music is not the actual talim since it lacks the oral and demonstrative form of leaning (Vedabala, 2016). Alongside, the standards of gharana music have also declined over-time in the country. There is a lack of riyaz that is needed for classical training, but since students are pursuing music as a hobby, they do not treat it with that outlook. There is no one left to take forward the legacy of Ustad Fateh Ali Khan or of Roshan Ara Begum in the country. The various old bandish and the khaas (special) element of each gharana that made them distinct from one another have gradually been fading away due to the lack of transference. 
+                    </p>
+                  <center>
+                  <figure>
+                    <img src="images/guru.jpg"/>
+                    <figcaption>Figure 3: A portrait depicting the Guru-shishya parampara.</figcaption>
+                  </figure>
+                  </center>
+                  <br>
+                    <p style="font-size:1.4em" align="justify">
+                    Before partition of India, it was the gharanas that carried forward the tradition of classical music. They used to exist either because of their unique and different style and technique of their performances or because of the various instruments they played. In Pakistan, gharanas like Patiala and Sham Chaurasi have been well known for their khayal, employing the use of sarangi, tabla and sitar in their performances. There used to be around a total of 45 gharanas in the un-divided India which took care of the vocal, instrumental and dance forms of classical music. 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    Unfortunately, today only a handful of proponents from these gharanas are left, with some of them becoming completely extinct such as the Agra gharana after the death of Ustad Asad Ali Khan. Currently in Pakistan, the Patiala gharana is active which is represented by Ustad Hamid Ali Khan and Shafqat Ali Khan, Delhi gharana is represented by Ustad Nasiruddin Saami, Sham Chaurasi by Akbar Ali, Gwalior by Ustad Fateh Ali Khan Hyderabadi, Talwandi by Mohammad Afzal Khan, whereas, Mewat gharana was taken forward by Ustad Rais khan till 2017 and is now taken forward by his son Farhan Khan, and Ustad Bashir Khan and Ejaz Hussain are currently the proponents of the Punjab gharana of tabla players (Ahmed, 2015). One of the main reasons for the decline of the gharana system in Pakistan is again due to the economic conditions of the musicians. Previously, the main source of income for these performers was through radio and television which were owned by the state. However, with the privatization of media and the advancement in internet and technology, the classical music faded away into the background. Because of this, many of the young musicians and members of these gharanas chose to move towards adopting popular music styles and music genres that were more financially rewarding. For instance, Patiala gharana’s young member Wali Hamid became part of a pop music group and he claimed that he earned more than his father who was a classical singer, Ustad Hamid Ali Khan. Besides this,  with the increase in popularity of qawwalis, many of the gharana members have also shifted their way to qawwali performances. A prime example is the Delhi gharana singers including Farid Ayaz who have become noticeable qawwali singers (Ahmed, 2015). 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    Another unfortunate aspect of Pakistani classical music is the absence of female artists. In the previous times, thumri and ghazal singing was quite common among female artists like Zeenat begum and Farida Khanum. As of today, there is no notable female classical singer that has emerged after Roshan Ara Begum. One of the main reasons for this is the stigma attached to music as being a low profession, and another is that in Pakistan, music is not taught as a compulsory part of formal education in colleges and universities, and therefore the exposure of the youth to pop music and culture is far higher than to classical music in comparison, and this shapes the path and genre they select for themselves in music, if they do at all. The list of institutes where music is taught is short and exhaustive, including the University of Sindh Jamshoro, the National College of Arts (NCA), Karachi National Academy of Performing Arts (NAPA), and recently Habib University, also in Karachi. The University of Sindh and the NCA have departments in musicology, whereas NAPA offers only basic and part-time classical music training (Ahmed, 2015). On the other hand, Habib University, through its recently formed Centre for South Asian Music, offers courses on South Asian music and musical theory as well as practical music lessons as part of its full-time liberal arts program. In comparison on a national scale, there are more than 15 universities in India that offer academic courses in music and advanced levels of private training. Hence, it can be argued that the lack of musical institutions and musical exposure in Pakistan for teaching music displays the lack of attention and respect given to the musical aspect of our cultural heritage, both by our government as well as private sector. This has led to the overall quality of classical music to decline in the country. 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    A report by The Express Tribune showed that absolutely zero recordings of classical and light classical music been made 6 months from the time of their research. The programs of classical music that were broadcasted on the radio during this time were only older recordings, and because of this, classical singers who relied on the radio as a source of income were left helpless. The musicians also claimed that the radio is not interested in their art and simply doesn’t have the budget to spend on us. All this points to the fact that maybe producing and promoting classical music is not a priority at all for the local radio industry. Previously, two to three classical music were recorded every day in Radio Pakistan. The interviewed musicians also claimed that many classical Pakistani singers don’t sing in their own country and rather go to other counties like India to release their albums because the state of music in Pakistan is in quite a poor condition. There is an extremely limited number of shows that are being recorded to promote classical music, and they too come with unrealistic and limited payments given to the artists. The radio officials were of the opinion that they don’t have enough funds for the new recordings, and it wouldn’t be wrong to point out here that perhaps people are not interested in light classical music to begin with since their musical diet has changed and therefore there is less investment in it by the radio, because they also want to focus on what will get them more view-time (“No space for classical music at Radio Pakistan,” 2010).
+                    </p>
+                </div>
+              </section>
+
+           <!-- Seven -->
+            <section id="fusion">
+                <div class="container">
+                  <header class="major">
+                    <h2>The Fusion Music Culture</h2>
+                  </header>
+                    <p style="font-size:1.4em" align="justify">
+                    There have also been numerous changes in the way classical music is performed now. Forms such as khayal, thumri and dhrupad are disappearing gradually, and the repertoire of classical music in Pakistan is thus shrinking. The ornamentation of music has become less common simply because audiences are more likely to favor and enjoy modern fast and romantic styles opposed to the older forms. There has also been a loss in the understanding of raag music in general and the mainstream musical diet of today is more of a mixture or fusion of various types of music including classical, disco, jazz, and folk (Vedabala, 2016). Many music albums today are launched in the name of classical music but barely represent the true culture of classical music as they heavily rely on western beats and synthesized tones. There is also an emerging trend of extensive remixing of songs that is happening in the local industry, where older compositions in complex raags are recomposed in simple upbeat melodies, accompanied by synthesized tones and sensual videos. This is the classical form that has gained popularity among the newer generations, and the extent of the generations’ to music disconnect is such that they start attributing the remix as the original because there is little to no awareness or credit given to the original composition in the remixed rendition. Thus, the modern fusion culture is being used as a tool to create and reproduce modern versions of older classical compositions, and the entire process draws out from the originality and respect of the art form. Again, this is not to say that all fusion work in music has proven to be a destructive force for classical music, but rather that most of it has been unable to do justice to the pure form of classical music since, as argued previously, its sole aim is to appeal to the audience and to achieve returns in terms of their sales. 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    In Pakistan, most of the initiatives to promote classical music have been undertaken by the private sector; the most notable example is of Coke Studio by Rohail Hayat. The production of Coke Studio combines within itself traditional Sufi and classical genres with many western instruments and techniques. Even though Coke Studio is trying to evoke interest in classical music among the youth, it is not delivering it in its pure form – rather again more in a fusion fashion. There have also been instances in the past where Coke Studio stole the classical version of certain songs and tried to reproduce them without permission. For instance, the Coke Studio season 8 song ‘Hina ki Khushbu’ was stolen from Chaudhry Pervaiz Waraich’s movie, Mere Huzoor, which was sung originally by Madam Noor Jehan and Mehdi Hasan (Sadiq, 2015). Similarly, Coke Studio season 12 song ‘Saiyaan’ faced a copyright claim controversy as it was an original by Madam Noor Jehan and the rights belonged to another organization; the song was taken down from the internet a few hours after its release (Mahmood, 2019). All these incidents hint to the fact that a sense of respect and attribution for original classical music is missing from Coke Studio, one of the very few initiatives in Pakistan that claim to, at least on paper, promote classical music. 
+                    </p>
+                  <center>
+                  <figure>
+                    <img src="images/mic.jpg"/>
+                    <figcaption>Figure 4: The modern microphone. <br> It is said to have transformed musical interpretation in all forms.</figcaption>
+                  </figure>
+                  </center>
+                  <br>
+                    <p style="font-size:1.4em" align="justify">
+                    Our classical musical heritage is thus fading away with the lack of creativity, the perceived westernization and piracy of westernized songs. The deteriorating condition of classical music is also due to the limited talim of music given to the musicians of today. Pakistan’s Farida khanum, Mehdi Hasan, Iqbal Bano, Madam Noor Jahan, Nusrat Fateh Ali, Abida Parveen and all other prominent names in the classical world received proper classical training and were truly well-versed in classical music (Altaf, 2017). They had an intimate knowledge of notes and knew the particular moods and time of the raags and could adapt and improvise to produce beautiful music. Without the knowledge and proper talim and training of classical music, an artist can simply not produce music of the same level. Today, the music industry is more focused on taking shortcuts by attempting to reproduce previous hits and are extremely limited in their ability to innovate on their own. This lack in dedicated training of the musicians and their limited knowledge of musical expressions and ornamentations has resulted in the lack of pure classical music. The same problem exists on the listener’s side where the audience has a limited amount of understanding and interest for pure classical music and at the moment, there is virtually not much being done to fill up this gap (Ahmed, 2015 & Jafri, 2016). Since classical music is no longer taught in schools or shown on radio or television, there is no direct or easy way to develop an understanding of traditional classical music among the modern audience.
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    To make things worse, the lack of state and cultural ministry sponsorship in the music and performing arts of Pakistan, alongside the existence of the so-called religious society in Pakistan who dub the legitimacy of music as being anti-Islamic further damage the reputation of music as well as musicians, making them less enthusiastic to learn traditional classical skills and knowledge. Private institutions in Pakistan are less likely to incorporate music and musical learnings in their curriculum, and all of these issues go together to make it hard for musicians to make a decent living by just relying on their music skills.
+                    </p>
+                </div>
+              </section>
+
+           <!-- Eight -->
+            <section id="film">
+                <div class="container">
+                  <header class="major">
+                    <h2>The Film Music Industry</h2>
+                  </header>
+                    <p style="font-size:1.4em" align="justify">
+                    The Pakistan film industry supposedly provides various forms of music that are of interest for all ages. However, it has butchered classical music as a genre and has given preference to vulgarity, and the only place left in films for classical music is in the background for sound effects. Rather than focusing on the actual emotional appeal of the music, film music is more focused towards the aesthetic sense of its appearance (Booth, 2011). Music directors are more into stealing, borrowing and reinventing their own kind of music, but current standards of production are mere exploitations of music for making money (Vedabala, 2016). Music directors are in search of melody and lyrics that could make their films a hit and are less focused on the variety and innovation in music that evokes pure emotion. During the 1950s and 1960s, there was an increasing emphasis laid on the lyrics within playback singing for film songs that appeared on the mainstream, and classical practices were still intact. This changed gradually  from the 1970s when many western instruments were added in the production of music and when deliberate attempts were made to replicate the western style of music through the use of electric instruments (Van der Meer, 2012). 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    Moreover, the tradition of playback singing also led to this new breed of playback singers who were recording songs in studios for actors to dance on and lip-sync to. Thus, the produced compositions now consisted of only minimal ornamentation with an increased use of different melodies. The songs became simple in terms of melody, instruments as well as their musical styles in order to make them understandable by large number of audiences, local as well as international. Despite these changes, the local groove had to be kept the same because in the end, the music had to appeal to the local audience. 
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    In the present day and age, there is also inclusion of English-based lyrics and rap in film songs, and one can argue that this has resulted in a lack of poetic richness which the Urdu language has always had. The music is also mostly based on the remixing theme that involves decomposing and fragmenting of classical songs and mixing of multi-track recordings (Booth, 2011). The remix songs transform many of the songs into dancing music using bass lines, drums and disco styles, along with alternating use of Hindi, Urdu and English lyrics. There has also been an introduction of filmi qawwalis in many modern films, where the traditional form of qawwali is infused with a modern, techno qawwali using western instruments and mixing of sound systems. A few examples are ‘Kajra Re’, a techno based qawwali,  and the reinvention of ‘Meray Rashke Qamar’ in Ajay Devgan’s movie Badshao, both of these were quite far from the traditional form of qawwali and were more oriented towards producing appealing dance tracks that could get results, again in terms of monetary gain (Jafri, 2016).
+                    </p>
+                </div>
+              </section>
+
+           <!-- Eight -->
+            <section id="narrative">
+                <div class="container">
+                  <header class="major">
+                    <h2>Personal Narratives</h2>
+                  </header>
+                    <p style="font-size:1.4em" align="justify">
+                    For purposes of our research, we conducted interviews of musicians who teach at Habib University’s Centre for South Asian music. These musicians are all proponents of different gharanas and are renowned nationally as well as internationally for their versatile training in classical music. Their names have been kept anonymous as per their request. All interviews were semi-structured and were conducted in a one-to-one setting so as to facilitate honest engagement.
+                    </p>
+                    <p style="font-size:1.4em" align="justify">
+                    The first question was regarding the state of classical music in Pakistan, and their opinions on its decline. All of them responded by establishing a clear distinction between the decline of classical music and in the number of people who understand it. There was an agreement on there being a lesser number of musical gatherings and events on classical music compared to previous times, but all of them expressed disagreement with the statement that classical music was dying or declining. “Classical music is a state of the soul…it can never vanish, not in Pakistan and not in India. The number of people who can experience this state can, and that is what Pakistan is experiencing…” claimed one of them. The second question was regarding the factors that led to this decrease in the number of people who understand the art form. Again, there was a consensus on the mainstream media being responsible for this, but one musician claimed that partly the responsibility also falls into the hands of those who were practicing musicians in the country before this decline as they could’ve taken it forward in other ways onto the next generation. The next question was regarding whether or not musicians in the country are able to sustain themselves solely based on their musical skills. There was an agreement on the fact that the government has failed to provide support and recognition to local talent in music, but there were also claims that established musicians are easily able to sustain themselves through local as well as international performances. The last question was regarding the transformation of the traditional guru-shishya relationship. Again, there was an agreement on the existence of a drastic change in the parampara; one of them explained that aspiring musicians these days are always on the hunt for learning things quickly, and no one is ready for the passion and riaz classical music demands, and because of that, even if they come to learn an instrument, the talim the learned musician gives them is incomplete as it lacks passion and dedication from the side of the student. 
+                    </p>
+                  <center>
+                  <figure>
+                    <img width="100%" src="images/musicroom.jpg"/>
+                    <figcaption>Figure 5: Khuwaja Mashooqullah Music Room at Habib University, Karachi. <br>Picture Courtesy of Iqran Rasheed Mehar.</figcaption>
+                  </figure>
+                  </center>
+                  <br>
+                    <p style="font-size:1.4em" align="justify">
+                    To summarize, the conducted interviews agreed with our secondary research completely. It must be pointed out here that while conducting these interviews, we could feel the passion and enthusiasm in the musicians and how they wanted to talk about their craft and their history. It is truly saddening to imagine the immense amount of loss Pakistan has experienced in terms of its musical heritage due to all that has happened.
+                    </p>
+                </div>
+              </section>
+
+          <!-- Nine -->
+            <section id="remarks">
+                <div class="container">
+                  <header class="major">
+                    <h2>Concluding Remarks</h2>
+                  </header>
+                    <p style="font-size:1.4em" align="justify">
+                    To reiterate, this essay analyzed the evolution of South Asian classical music in the context of Pakistan. It explored various fundamental events and changes that occurred historically because of which the music has become what it is today.  In the end, we would like to add that the intention of this research is not to demotivate aspiring musicians or discourage the music community in Pakistan, but rather, to point out the aspects of our society that are exploiting our beautiful musical heritage and leveraging it for their financial gains. With everything in place, the fact that musical communities and events still exist in Pakistan, and that they are trying to expand their outreach and to appeal to the youth through pure classical forms evokes a good feeling about the future of the art form in our country Pakistan.
+                    </p>
+                </div>
+              </section>
+
+            <!-- Ten -->
               <section id="team">
                 <div class="container">
                   <header class="major">
                     <h2>The Team</h2><br>
                   </header>
+                  <center>
                   <div class="row">
-                    <div class="col-3 col-12-xsmall">
+                    <div class="col-6 col-12-xsmall">
                       <span class="image avatar"><img src="images/oy.jpg" alt="" /></span>
                       <div style="padding-bottom:0px !important">
                         <header class="major"><h3 class="names">Osama</h3></header>
                         <header class="major"><h3 class="names">Yousuf</h3></header><br>
                       </div>
                     </div>
-                    <div class="col-3 col-12-xsmall">
+                    <div class="col-6 col-12-xsmall">
                       <span class="image avatar"><img src="images/oa.jpg" alt="" /></span>
                       <div style="padding-bottom:0px !important">
                         <header class="major"><h3 class="names">Omema</h3></header>
@@ -323,91 +297,37 @@
                       </div>
                     </div>
                   </div>
+                </center>
                   <br>
-                  <p style="font-size:1.4em">We are students at Habib University,
+                  <p style="font-size:1.4em" align="justify">We are students at Habib University,
                      class of 2020, taking the course Music of South Asia with Professor 
 					 <a href="https://habib.edu.pk/SSE/yousuf-kerai/"> Yousuf Kerai </a>. Thanks for checking out our project!</p>
                 </div>
               </section>
 
-              <!-- Seven -->
-                <section id="sources">
+              <!-- Eleven -->
+                <section id="references">
                   <div class="container">
                     <header class="major">
-                      <h2>Sources</h2>
-                      <p>We would like to give credit to the following third
-                         party sources for their assistance in this project:</p>
+                      <h2>References</h2>
                     </header>
                     <ul>
-                      <li>
-                        <p style="font-size:1.4em">
-                          Kevin Suffern's
-                          <a href="http://www.raytracegroundup.com/" target="_blank">
-                            Ray Tracing from the Ground Up
-                          </a>
-                        </p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em">
-                          Nicholas Sharp's
-                          <a href="https://github.com/nmwsharp/happly" target="_blank">
-                            hapPLY
-                          </a> for parsing PLY files
-                        </p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em">
-                          NeonArtworks'
-                          <a href="https://www.thingiverse.com/thing:1138169" target="_blank">
-                            high-poly chess piece models
-                          </a>
-                        </p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em">
-                          Professor <a href="https://habib.edu.pk/SSE/dr-waqar-saleem/" target="_blank">Waqar Saleem</a>, for his lectures and guidance
-                        </p>
-                      </li>
+                      <li> <p style="font-size:1.4em">Ahmed, Vaqar. (2015). Dying Notes [Blog post]. Retrieved from: <a href="https://newslinemagazine.com/magazine/dying-notes/"> Source </a></p> </li>
+                      <li> <p style="font-size:1.4em">Altaf, Anjum. (2017, Jan 9). The Death of Classical Music, DAWN . Retrieved from: <a href="https://www.dawn.com/news/1307260">Source</a></p> </li>
+                      <li> <p style="font-size:1.4em">Booth, G. D. (2011). Preliminary thoughts on Hindi popular music and film production: India's ‘culture industry (ies)’, 1970–2000. South Asian Popular Culture, 9(02), 215-221. </p> </li>
+                      <li> <p style="font-size:1.4em">Chaubey, S. K. (1945). Indian music today. Kitab Mahal. </p> </li>
+                      <li> <p style="font-size:1.4em">Farrell, G. (1997). Indian music and the West. Oxford: Clarendon Press. </p> </li>
+                      <li> <p style="font-size:1.4em">Jafri, Nabeel. (2016, Jun 23). The Lost Soul: Qawwali’s Journey from Ecstasy to Entertainment, Herald DAWN. Retrieved from: <a href="https://herald.dawn.com/news/1153407"> Source </a> </p> </li>
+                      <li> <p style="font-size:1.4em">Mahmood, Rafay. (2019). Rohail Hyatt responds to copyright infringement claims against Coke Studio 12, The Express Tribune. Retrieved from: <a href="https://tribune.com.pk/story/2088450/4-rohail-hyatt-responds-copyright-infringement-claims-coke-studio-12/">Source </a> </p> </li>
+                      <li> <p style="font-size:1.4em">Natak, S., & van der Meer, W. (1975). CULTURAL EVOLUTION. Journal of the Sangeet Natak Akademi, 35. </p> </li>
+                      <li> <p style="font-size:1.4em">Neuman, D. M. (1990). The life of music in North India: The organization of an artistic tradition. University of Chicago Press. </p> </li>
+                      <li> <p style="font-size:1.4em">No space for classical music at Radio Pakistan. (2010, Jul 21), The Express Tribune. Retrieved from: <a href="https://tribune.com.pk/story/29350/no-space-for-classical-music-at-radio-pakistan/"> Source </a> </p> </li>
+                      <li> <p style="font-size:1.4em">Sadiq, Rida. (2015). Coke Studio Allegedly Accused of Ripping Off Classic Songs [Blog post]. Retrieved from: <a href="https://www.brandsynario.com/coke-studio-allegedly-accused-of-ripping-off-classic-songs/."> Source </a> </p> </li>
+                      <li> <p style="font-size:1.4em">Rhythms of India: Episode 3 Sounds of the City. (2019). [Online]. Directed by Pete Stanton. India. BBC Four Available on BBC. Retrieved from: <a href="https://www.bbc.co.uk/programmes/m0005h7f/episodes/guide"> Source </a> </p> </li>  
+                      <li> <p style="font-size:1.4em">Van der Meer, W. (2012). Hindustani music in the 20th century. Springer Science & Business Media.
+                      <li> <p style="font-size:1.4em">Vedabala, S. (2016). Indian Classical Music in a Globalized World. Sangeet Galaxy, 5. </p> </li>
+                      <li> <p style="font-size:1.4em">Yusuf, S. (2018). Impact of Globalization on Sarangi players on 21st Century India. </p> </li>
                     </ul>
-                  </div>
-                </section>
-
-                <!-- Eight -->
-                <section id="builds">
-                  <div class="container">
-                    <header class="major">
-                      <h2>Build Files</h2>
-                      <p>The following build files allow you to reproduce the images shown on this website:</p>
-                    </header>
-                    <ul>
-                      <li>
-                        <p style="font-size:1.4em"><b>buildAntiAlias.cpp:</b> A scene with hard edges to demonstrate anti-aliasing</p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em"><b>buildChapter14.cpp:</b> The provided build from chapter 14 of the textbook</p>
-                      </li>
-                      <li>
-                          <p style="font-size:1.4em"><b>buildChessHigh.cpp:</b> High resolution (1920x1920) version of the chess scene</p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em"><b>buildChessLow.cpp:</b> Low resolution (480x480) version of the chess scene</p>
-                      </li>
-                      <li>
-                          <p style="font-size:1.4em"><b>buildHelloWorld.cpp:</b> The provided hello world scene</p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em"><b>buildChapter14.cpp:</b> A scene demonstrating lighting and material features</p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em"><b>buildChapter14.cpp:</b> Our first scene, consisting of a grid of spheres</p>
-                      </li>
-                      <li>
-                        <p style="font-size:1.4em"><b>buildChapter14.cpp:</b> A scene showcasing a single ply file</p>
-                      </li>                        
-                    </ul>
-                    <p style="font-size:1.4em">All of these build files can be found in the <a href="https://github.com/ptz-csci-155/p2--p2-d/tree/master/raytracer/build" target="-blank">raytracer/build</a> folder of our repository.  
-                    To use a particular build file, change the first dependency of the "raytracer" target in our make file and run make.
-                    </p>
                   </div>
                 </section>
           </div>
